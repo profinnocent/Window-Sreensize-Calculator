@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <head>
   <title>Window ScreenSize Calculator </title>
 </head>
 <style type="text/css" media="all">
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
   body {
-    /* background-color: lightblue; */
-    padding: 0 10px;
     font-family: roboto;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
 
   }
 
   .container{
     background-color: rgb(26, 228, 228);
-    padding:50px;
+    padding:100px 50px;
+    margin: 10px;
     border-radius: 5px;
+    min-width: 90%;
+    min-height: 80%;
   }
 
   h1 {
     color: blue;
-    margin: 5px 0 10px;
+    margin: 5px 0 20px;
   }
 
   p{
     font-size:24px;
+    margin: 20px auto;
   }
 
   button {
@@ -38,7 +45,6 @@
     color: white;
     border-radius: 5px;
     border: 2px solid white;
-    align-self: center;
     transition: 0.4s ease-in-out;
   }
 
@@ -52,10 +58,19 @@
     font-weight: 600;
   }
 
-    
-    
+    /*Media query  */
+    /* @media (max-width:768px){
+      body{
+        display: block;
 
-  
+      }
+     
+      .container{
+        width: 90%;
+      }
+    } */
+
+
 </style>
 
 <body>
@@ -88,7 +103,7 @@
       window.addEventListener('resize', function () {
         document.getElementById("windowWidth").innerHTML = "";
         document.getElementById("windowHeight").innerHTML = "";
-      })
+      });
     }
   </script>
     
