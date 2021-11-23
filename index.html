@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <head>
   <title>Window ScreenSize Calculator </title>
 </head>
@@ -8,12 +8,19 @@
   body {
     /* background-color: lightblue; */
     padding: 0 10px;
+    font-family: roboto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
   }
 
   .container{
-    background-color: aqua;
+    background-color: rgb(26, 228, 228);
     padding:30px;
     max-width: 400px;
+    border-radius: 5px;
   }
 
   h3 {
@@ -27,6 +34,8 @@
     color: white;
     border-radius: 5px;
     border: 2px solid white;
+    align-self: center;
+    transition: 0.4s ease-in-out;
   }
 
   button:hover{
