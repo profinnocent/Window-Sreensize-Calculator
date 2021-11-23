@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Try It Yourself </title>
+</head>
+<style type="text/css" media="all">
+  body {
+    /* background-color: lightblue; */
+    padding: 0 10px;
+  }
+
+  .container{
+    background-color: aqua;
+    padding:30px;
+    max-width: 400px;
+  }
+
+  h2 {
+    color: blue;
+    margin: 5px 0 10px;
+  }
+
+  button {
+    padding: 10px 40px;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid white;
+  }
+
+  button:hover{
+    transform: scale(1.2);
+  }
+
+  #windowWidth,
+  #windowHeight {
+    font-size: 24px;
+    font-weight: 600;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <h4>WELCOME TO</h4>
+    <h2> WINDOW SIZE CALCULATOR</h2>
+    <p>
+      Rotate or Resize your device <br />and click the button to see its dimensions
+    </p>
+    <p>
+      Window Width: <span id="windowWidth"></span>
+    </p>
+    <p>
+      Window Height: <span id="windowHeight"></span>
+    </p>
+    <button onclick="calcSize()">CALCULATE</button>
+ 
+  <script>
+    screenResize();
+
+    function calcSize() {
+
+      document.getElementById("windowWidth").innerHTML = window.innerWidth + ' ' + 'pixels';
+      document.getElementById("windowHeight").innerHTML = window.innerHeight + ' ' + 'pixels';
+
+    }
+
+    function screenResize() {
+      window.addEventListener('resize', function () {
+        document.getElementById("windowWidth").innerHTML = "";
+        document.getElementById("windowHeight").innerHTML = "";
+      })
+    }
+  </script>
+   </div>
+</body>
+
+</html>
