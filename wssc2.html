@@ -17,8 +17,7 @@
     align-items: center;
     height: 100vh;
     width: 100vw;
-/* overflow: hidden; */
-margin:20px ;
+
   }
 
   .container{
@@ -39,20 +38,6 @@ margin:20px ;
   p{
     font-size:24px;
     margin: 40px auto;
-  }
-
-  button {
-    padding: 20px 80px;
-    background-color: blue;
-    color: white;
-    border-radius: 5px;
-    border: 2px solid white;
-    transition: 0.4s ease-in-out;
-    font-size: 24px;
-  }
-
-  button:hover{
-    transform: scale(1.1);
   }
 
   #windowWidth,
@@ -88,30 +73,30 @@ margin:20px ;
     <p>
       This Window Height: <span id="windowHeight"></span>
     </p>
-    <div>
-    <button onclick="calcSize()">CALCULATE</button>
-    </div>
+    
   </div>
   <div class="nlink">
-    <p>Click here <a href="wssc2.html">Version-2</a> for continuous mesurement.</p>
+    <p>Click here <a href="index.html">Version-1</a> for static mesurement.</p>
   </div>
 
   <script>
-    screenResize();
+    // screenResize();
+    // calcSize();
 
-    function calcSize() {
+    // function calcSize() {
+      window.addEventListener('resize', function(){
 
       document.getElementById("windowWidth").innerHTML = window.innerWidth + ' ' + 'pixels';
       document.getElementById("windowHeight").innerHTML = window.innerHeight + ' ' + 'pixels';
 
-    }
+    });
 
-    function screenResize() {
-      window.addEventListener('resize', function () {
-        document.getElementById("windowWidth").innerHTML = "";
-        document.getElementById("windowHeight").innerHTML = "";
-      });
-    }
+    // function screenResize() {
+    //   window.addEventListener('resize', function () {
+    //     document.getElementById("windowWidth").innerHTML = "";
+    //     document.getElementById("windowHeight").innerHTML = "";
+    //   });
+    // }
   </script>
     
 </body>
